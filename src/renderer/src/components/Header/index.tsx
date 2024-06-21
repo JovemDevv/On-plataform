@@ -3,9 +3,7 @@ import { Code, CaretDoubleRight, TrashSimple } from 'phosphor-react'
 import * as Breadcrumbs from './Breadcrumbs'
 
 export function Header() {
-  const isMacOS = process.platform === 'darwin'
-  const isWindows = process.platform === 'win32'
-  const isLinux = process.platform === 'linux'
+  const isWin = process.platform === 'win32'
   const isSidebarOpen = true
 
   return (
@@ -14,7 +12,7 @@ export function Header() {
       className={clsx(
         'border-b border-rotion-600 py-[1.125rem] px-6 flex items-center gap-4 leading-tight transition-all duration-250 region-drag',
         {
-          'pl-24': !isSidebarOpen && (isMacOS || isWindows || isLinux),
+          'pl-24': !isSidebarOpen && isWin,
           'w-screen': !isSidebarOpen,
           'w-[calc(100vw-240px)]': isSidebarOpen,
         },

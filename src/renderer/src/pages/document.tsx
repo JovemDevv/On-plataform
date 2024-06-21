@@ -4,7 +4,7 @@ export function Document() {
   return (
     <main className="flex-1 flex items-center justify-center text-rotion-400">
       Document
-      <Link to="/">Acesar documento </Link>
+      <Link to="/">Acessar documento</Link>
     </main>
   )
 }
